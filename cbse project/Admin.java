@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
  {
 		  PrintWriter out = res.getWriter();
-			res.setContentType("<html><body bgcolor='lavender'>");
+			res.setContentType("text/html");
 		String name=req.getParameter("name1");
 		  String id=req.getParameter("id1");
 		  
@@ -34,7 +34,7 @@ import javax.servlet.http.*;
 					{
 						out.println("sno = "+k+"  "+ " name = "+rs.getString(1)+" "+"id = "+rs.getString(2)+" computer = "+rs.getString(3)+" Math = "+rs.getString(4)+" Hindi = "+rs.getString(5)+"English ="rs.getString(6)+"Science = "rs.getString(7));
 							out.println("<br>");
-							int k=k+1;
+							 k++;
 				}
 				else if(name=="" | id=="" )
 				{
